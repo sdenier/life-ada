@@ -14,7 +14,11 @@ package body Game_Of_Life is
 	
 	procedure Display(Cell : in T_Cell) is
 	begin
-		Put_Line(Is_Alive(Cell)'Img);
+		if Is_Alive(Cell) then
+			Put("O");
+		else
+			Put(" ");
+		end if;
 	end Display;
 	
 end Game_Of_Life;
