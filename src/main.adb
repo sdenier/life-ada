@@ -1,7 +1,7 @@
 with Game_Of_Life; use Game_Of_Life;
 
 procedure Main is
-	Game : T_Game;
+	Cell : T_Cell;
 begin
-	Run(Game);
+	Display(Cell);
 end Main;

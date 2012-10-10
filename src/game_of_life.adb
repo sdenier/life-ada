@@ -1,8 +1,15 @@
+with Text_IO; use Text_IO;
+
 package body Game_Of_Life is
 	
-	procedure Run(Game : in out T_Game) is
+	function Live(Cell : in T_Cell) return Boolean is
 	begin
-		null;
-	end Run;
+		return Cell.Live;
+	end Live;
+	
+	procedure Display(Cell : in T_Cell) is
+	begin
+		Put_Line(Live(Cell)'Img);
+	end Display;
 	
 end Game_Of_Life;
