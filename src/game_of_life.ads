@@ -4,7 +4,7 @@ package Game_Of_Life is
 	
 	function Live_Cell return T_Cell;
 	
-	function Live(Cell : in T_Cell) return Boolean;
+	function Is_Alive(Cell : in T_Cell) return Boolean;
 	
 	procedure Display(Cell : in T_Cell);
 	

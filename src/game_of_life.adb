@@ -7,14 +7,14 @@ package body Game_Of_Life is
 		return (Live => True);
 	end Live_Cell;
 	
-	function Live(Cell : in T_Cell) return Boolean is
+	function Is_Alive(Cell : in T_Cell) return Boolean is
 	begin
 		return Cell.Live;
-	end Live;
+	end Is_Alive;
 	
 	procedure Display(Cell : in T_Cell) is
 	begin
-		Put_Line(Live(Cell)'Img);
+		Put_Line(Is_Alive(Cell)'Img);
 	end Display;
 	
 end Game_Of_Life;
