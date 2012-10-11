@@ -3,6 +3,7 @@ package Game_Of_Life.Cells is
 	type T_Cell is private;
 
 	function Live_Cell return T_Cell;
+	function Dead_Cell return T_Cell;
 
 	function Is_Alive(Cell : in T_Cell) return Boolean;
 

@@ -7,6 +7,11 @@ package body Game_Of_Life.Cells is
 		return (Live => True);
 	end Live_Cell;
 	
+	function Dead_Cell return T_Cell is
+	begin
+		return (Live => False);
+	end Dead_Cell;
+	
 	function Is_Alive(Cell : in T_Cell) return Boolean is
 	begin
 		return Cell.Live;
@@ -17,7 +22,7 @@ package body Game_Of_Life.Cells is
 		if Is_Alive(Cell) then
 			Put("O");
 		else
-			Put(" ");
+			Put("-");
 		end if;
 	end Display;
 
