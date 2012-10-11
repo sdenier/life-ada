@@ -1,4 +1,6 @@
-with Game_Of_Life; use Game_Of_Life;
+with Game_Of_Life.Cells; use Game_Of_Life.Cells;
+with Game_Of_Life.Neighbours; use Game_Of_Life.Neighbours;
+with Game_Of_Life.Rules; use Game_Of_Life.Rules;
 with Text_IO; use Text_IO;
 
 procedure Main is
