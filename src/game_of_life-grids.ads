@@ -7,6 +7,8 @@ package Game_Of_Life.Grids is
 	function Blinker_Grid return T_Grid;
 	
 	procedure Display_Grid(Grid : in T_Grid);
+		
+	function Next_Generation(Grid : in T_Grid) return T_Grid;
 
 private
 

@@ -4,5 +4,9 @@ procedure Main is
 	Grid : T_Grid;
 begin
 	Grid := Blinker_Grid;
-	Display_Grid(Grid);
+	loop
+		Display_Grid(Grid);
+		delay 1.0;
+		Grid := Next_Generation(Grid);
+	end loop;
 end Main;
