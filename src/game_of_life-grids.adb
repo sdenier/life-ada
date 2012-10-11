@@ -57,9 +57,35 @@ package body Game_Of_Life.Grids is
 	end Next_Generation;
 	
 	function Get_Neighbours(Grid : in T_Grid; Row : in Positive; Column : in Positive) return T_Cell_Neighbours is
-		Neighbours : T_Cell_Neighbours;
+		Neighbours : T_Cell_Neighbours := (others => Dead_Cell);
 	begin
-			return (x, x, x, x, x, O, O, O);
+		if Row > 1 then
+			if Column > 1 then
+				Neighbours(1) := Grid(Row - 1, Column - 1);
+			end if;
+			Neighbours(2) := Grid(Row - 1, Column);
+			if Column < 5 then
+				Neighbours(3) := Grid(Row - 1, Column + 1);
+			end if;
+		end if;
+		
+		if Column > 1 then
+			Neighbours(4) := Grid(Row ,    Column - 1);
+		end if;
+		if Column < 5 then
+			Neighbours(5) := Grid(Row,     Column + 1);
+		end if;
+		
+		if Row < 5 then
+			if Column > 1 then
+				Neighbours(6) := Grid(Row + 1, Column - 1);
+			end if;
+			Neighbours(7) := Grid(Row + 1, Column);
+			if Column < 5 then
+				Neighbours(8) := Grid(Row + 1, Column + 1);
+			end if;
+		end if;
+		return Neighbours;
 	end Get_Neighbours;
 
 end Game_Of_Life.Grids;
