@@ -3,8 +3,6 @@ with Game_Of_Life.Cells; use Game_Of_Life.Cells;
 package Game_Of_Life.Neighbours is
 
 	type T_Cell_Neighbours is array (Integer range 1 .. 8) of T_Cell;
-		
-	function Get_Neighbours(Cell : in T_Cell) return T_Cell_Neighbours;
 
 	-- Any live cell with fewer than two live neighbours dies, as if caused by under-population
 	function Under_Population(Neighbours: in T_Cell_Neighbours) return Boolean;

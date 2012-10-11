@@ -1,10 +1,5 @@
 package body Game_Of_Life.Neighbours is
 
-	function Get_Neighbours(Cell : in T_Cell) return T_Cell_Neighbours is
-	begin
-		return (others => (Live_Cell));
-	end Get_Neighbours;
-
 	function Alive_Count(Neighbours : in T_Cell_Neighbours) return Natural is
 		Count : Natural := 0;
 	begin
