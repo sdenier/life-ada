@@ -5,7 +5,10 @@ package Game_Of_Life.Grids is
 	
 	type T_Grid is private;
 	
+	function Block_Grid return T_Grid;
 	function Blinker_Grid return T_Grid;
+	function Toad_Grid return T_Grid;
+	function Glider_Grid return T_Grid;
 	
 	procedure Display_Grid(Grid : in T_Grid);
 	

@@ -6,6 +6,15 @@ package body Game_Of_Life.Grids is
 
 	function O return T_Cell renames Live_Cell;
 	function x return T_Cell renames Dead_Cell;
+	
+	function Block_Grid return T_Grid is
+	begin
+		return ((x, x, x, x, x),
+				  (x, O, O, x, x),
+				  (x, O, O, x, x),
+				  (x, x, x, x, x),
+				  (x, x, x, x, x));
+	end Block_Grid;
 
    ------------------
    -- Blinker_Grid --
@@ -19,6 +28,24 @@ package body Game_Of_Life.Grids is
 				  (x, x, x, x, x),
 				  (x, x, x, x, x));
    end Blinker_Grid;
+
+   function Toad_Grid return T_Grid is
+   begin
+		return ((x, x, x, x, x),
+				  (x, x, x, x, x),
+				  (x, x, O, O, O),
+				  (x, O, O, O, x),
+				  (x, x, x, x, x));
+   end Toad_Grid;
+
+   function Glider_Grid return T_Grid is
+   begin
+		return ((x, O, x, x, x),
+				  (x, x, O, x, x),
+				  (O, O, O, x, x),
+				  (x, x, x, x, x),
+				  (x, x, x, x, x));
+   end Glider_Grid;
 
    ------------------
    -- Display_Grid --
